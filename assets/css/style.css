@@ -639,6 +639,13 @@ main {
   overflow: hidden;
 }
 
+.testimonials-date {
+  color: #FFAA33;
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+}
+
 /**
  * #testimonials-modal
  */

@@ -11,82 +11,55 @@
   <meta name="keywords"
     content="Mustafa Eftekin, Software Engineering, React Native, Istanbul, Turkey, AI, ML, Data Science" />
   <meta name="author" content="Mustafa Eftekin" />
-  <link rel="canonical" href="https://eftekin.net/" /> <!-- Change the href value to your actual website URL -->
+  <link rel="canonical" href="https://eftekin.net/" />
 
-  <<!-- Christmas Spirit -->
-    <script>
-
-
-      function checkTimeAndTriggerFireworks() {
-        const currentDate = new Date();
-        const currentMonth = currentDate.getMonth();
-        const currentHour = currentDate.getHours();
-        const currentMinutes = currentDate.getMinutes();
-        // Check if it's January and the time is 00:00
-        if (currentMonth === 0 && currentHour === 0 && currentMinutes === 0) {
-          const container = document.querySelector('.fireworks')
-          const fireworks = new Fireworks.default(container)
-          fireworks.start()
-        }
-      }
-      function createTwinklingLights(containerSelector, numLights) {
-        const lightrope = document.querySelector(containerSelector);
-
-        for (let i = 0; i < numLights; i++) {
-          const light = document.createElement('div');
-          lightrope.appendChild(light);
-        }
-      }
+  <!-- Christmas Spirit -->
+  <script>
+    function checkTimeAndTriggerFireworks() {
       const currentDate = new Date();
       const currentMonth = currentDate.getMonth();
-      const monthsWithSnow = [11, 0];
+      const currentHour = currentDate.getHours();
+      const currentMinutes = currentDate.getMinutes();
+      if (currentMonth === 0 && currentHour === 0 && currentMinutes === 0) {
+        const container = document.querySelector('.fireworks')
+        const fireworks = new Fireworks.default(container)
+        fireworks.start()
+      }
+    }
 
+    function createTwinklingLights(containerSelector, numLights) {
+      const lightrope = document.querySelector(containerSelector);
+      for (let i = 0; i < numLights; i++) {
+        const light = document.createElement('div');
+        lightrope.appendChild(light);
+      }
+    }
 
+    const currentDate = new Date();
+    const currentMonth = currentDate.getMonth();
+    const monthsWithSnow = [11, 0];
 
-      window.onload = function () {
-        if (monthsWithSnow.includes(currentMonth)) {
-          const snowScript = document.createElement('script');
-          snowScript.src = 'https://app.embed.im/snow.js';
-          snowScript.defer = true;
-          document.head.appendChild(snowScript);
-          createTwinklingLights('.lightrope', 19);
-          setInterval(checkTimeAndTriggerFireworks, 1000);
-        }
+    window.onload = function () {
+      if (monthsWithSnow.includes(currentMonth)) {
+        const snowScript = document.createElement('script');
+        snowScript.src = 'https://app.embed.im/snow.js';
+        snowScript.defer = true;
+        document.head.appendChild(snowScript);
+        createTwinklingLights('.lightrope', 19);
+        setInterval(checkTimeAndTriggerFireworks, 1000);
+      }
+    };
+  </script>
 
-
-      };
-
-    </script>
-
-    <!--
-    - favicon
-  -->
-    <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon" />
-
-    <!--
-    - custom css link
-  -->
-    <link rel="stylesheet" href="./assets/css/style.css" />
-
-    <!--
-    - google font link
-  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
 </head>
 
-
 <body>
-  <!--
-    - #MAIN
-  -->
-
   <main>
-    <!--
-      - #SIDEBAR
-    -->
-
     <aside class="sidebar" data-sidebar style="color: #FFAA33">
       <div class="sidebar-info">
         <figure class="avatar-box">
@@ -95,13 +68,11 @@
 
         <div class="info-content">
           <h1 class="name" title="Mustafa Eftekin">Mustafa Eftekin</h1>
-
-          <p class="title">Software Enginnering Student</p>
+          <p class="title">Software Engineering Student</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
           <span>Show Contacts</span>
-
           <ion-icon name="chevron-down"></ion-icon>
         </button>
       </div>
@@ -114,10 +85,8 @@
             <div class="icon-box">
               <ion-icon name="mail-outline"></ion-icon>
             </div>
-
             <div class="contact-info">
               <p class="contact-title">Email</p>
-
               <a href="mailto:mustafa@eftekin.net" class="contact-link">mustafa@eftekin.net</a>
             </div>
           </li>
@@ -126,10 +95,8 @@
             <div class="icon-box">
               <ion-icon name="calendar-outline"></ion-icon>
             </div>
-
             <div class="contact-info">
               <p class="contact-title">Birthday</p>
-
               <time datetime="2002-07-17">July 17, 2002</time>
             </div>
           </li>
@@ -138,11 +105,9 @@
             <div class="icon-box">
               <ion-icon name="location-outline"></ion-icon>
             </div>
-
             <div class="contact-info">
               <p class="contact-title">Location</p>
-
-              <address>Istanbul, Turkiye</address>
+              <address>Istanbul, Turkey</address>
             </div>
           </li>
         </ul>
@@ -167,24 +132,11 @@
               <ion-icon name="logo-github"></ion-icon>
             </a>
           </li>
-
-          <!-- <li class="social-item">
-              <a href="https://instagram.com/eftekindev" class="social-link">
-                <ion-icon name="logo-instagram"></ion-icon>
-              </a>
-            </li> -->
         </ul>
       </div>
     </aside>
 
-    <!--
-      - #main-content
-    -->
-
     <div class="main-content">
-      <!--
-        - #ABOUT
-      -->
       <div class="lightrope" style="margin-top: -18px;"></div>
       <article class="about active" data-page="about">
         <header>
@@ -192,131 +144,95 @@
         </header>
 
         <section class="about-text">
-          <p>Hello! I'm Mustafa Eftekin, a third-year software engineering student in Istanbul. Passionate about
-            technology, I’m focusing on AI/ML. I have completed the Data Science Skill Path and am now progressing
-            through the ML/AI Engineer Career Path on Codecademy. I’m actively sharing my journey on GitHub, committed
-            to learning and applying my skills to make a positive impact.</p>
+          <p>I’m passionate about exploring the world of technology and how it can be used to make a difference. With a
+            strong curiosity to learn, I’m always seeking new ways to solve problems and grow my skill set. Whether it’s
+            coding, AI, or full-stack development, I’m excited to take on new challenges and create solutions that truly
+            matter. If you’d like to connect or chat about tech, feel free to reach out!</p>
         </section>
 
 
-        <!--
-          - service
-        -->
-
         <section class="service">
-          <h3 class="h3 service-title">What i'm working on</h3>
+          <h3 class="h3 service-title">What I'm working on</h3>
 
           <ul class="service-list">
-
             <li class="service-item">
               <div class="service-icon-box">
-                <img src="./assets/images/icon-data-science.svg" alt="mobile app icon" width="37" />
+                <img src="./assets/images/icon-ai.svg" alt="data science icon" width="37" />
               </div>
-
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Data Science</h4>
-
+                <h4 class="h4 service-item-title">AI & ML Projects</h4>
                 <p class="service-item-text">
-                  Currently working on Data Science Foundations with Codecademy.
+                  Developing AI solutions and exploring new techniques.
                 </p>
               </div>
             </li>
 
             <li class="service-item">
               <div class="service-icon-box">
-                <img src="./assets/images/icon-ai.svg" alt="AI icon" width="40" />
+                <img src="./assets/images/icon-dev.svg" alt="full-stack icon" width="40" />
               </div>
-
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">AI Development</h4>
-
+                <h4 class="h4 service-item-title">Full-Stack Development</h4>
                 <p class="service-item-text">
-                  Currently developing AI projects focusing on machine learning and computer vision.
-                </p>
+                  Building practical applications and refining my development skills.
 
+                </p>
               </div>
             </li>
-
           </ul>
         </section>
 
-
-        <!--
-          - testimonials
-        -->
-
         <section class="testimonials">
-
           <h3 class="h3 testimonials-title">My Experiences</h3>
 
           <ul class="testimonials-list has-scrollbar">
-
             <li class="testimonials-item">
               <div class="content-card" data-testimonials-item>
-
                 <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/wincoi-icon.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
+                  <img src="./assets/images/wincoi-icon.png" alt="Daniel Lewis" width="60" data-testimonials-avatar>
                 </figure>
 
                 <h4 class="h4 testimonials-item-title" data-testimonials-title>React Native Developer
-                  <time datetime="2022-11-01" class="testimonials-date" data-modal-date>July 2023 — January 2024</time>
+                  <time datetime="2022-11-01" class="testimonials-date" data-modal-date>July 2023 — January
+                    2024</time>
                 </h4>
 
                 <div class="testimonials-text" data-testimonials-text>
-                  <p>
-
-                    &#x2022; Volunteered at a startup to assist as a Junior React Native Developer,
-                    contributing to team collaboration, and learning Git and GitHub workflows.
-
-                  </p>
+                  <p>Volunteered as a Junior React Native Developer, contributing to team projects and learning Git
+                    workflows.</p>
                 </div>
-
               </div>
             </li>
-
           </ul>
-
         </section>
 
-
         <section class="clients">
-
           <h3 class="h3 clients-title">Tech Stack</h3>
 
           <ul class="clients-list has-scrollbar">
-
             <li class="clients-item">
-              <img src="./assets/images/python-svgrepo-com.svg" alt="python">
-            </li>
-
-            <li class="clients-item">
-              <img src="./assets/images/js-svgrepo-com.svg" alt="javascript">
+              <img src="./assets/images/python-svgrepo-com.svg" alt="Python">
             </li>
             <li class="clients-item">
-              <img src="./assets/images/react-svgrepo-com.svg" alt="react" class="mongoDB-logo">
+              <img src="./assets/images/js-svgrepo-com.svg" alt="JavaScript">
             </li>
-
             <li class="clients-item">
-              <img src="./assets/images/cpp3-svgrepo-com.svg" alt="cpp">
+              <img src="./assets/images/react-svgrepo-com.svg" alt="React">
             </li>
-
             <li class="clients-item">
-              <img src="./assets/images/java-svgrepo-com.svg" alt="java" class="streamlit-logo">
+              <img src="./assets/images/cpp3-svgrepo-com.svg" alt="C++">
             </li>
-
+            <li class="clients-item">
+              <img src="./assets/images/java-svgrepo-com.svg" alt="Java">
+            </li>
           </ul>
-
         </section>
-        <!--
-    - custom js link
-  -->
-        <script src="./assets/js/script.js"></script>
+    </div>
+    </div>
 
-        <!--
-    - ionicon link
-  -->
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

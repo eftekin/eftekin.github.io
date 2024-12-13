@@ -798,7 +798,7 @@ main {
 }
 
 .clients-item img {
-  width: 100%;
+  width: 65%;
   filter: grayscale(1);
   transition: var(--transition-1);
 }
@@ -1593,7 +1593,7 @@ textarea.form-input::-webkit-resizer {
   /* clients */
 
   .clients-list {
-    gap: 50px;
+    gap: 10px;
     margin: 0 -30px;
     padding: 45px;
     scroll-padding-inline: 45px;

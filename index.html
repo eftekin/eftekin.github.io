@@ -12,24 +12,68 @@
     content="Mustafa Eftekin, Software Engineering, React Native, Istanbul, Turkey, AI, ML, Data Science" />
   <meta name="author" content="Mustafa Eftekin" />
   <link rel="canonical" href="https://eftekin.net/" /> <!-- Change the href value to your actual website URL -->
-  <!-- SNOW EFFECT -->
-  <script src="https://app.embed.im/snow.js" defer></script>
-  <!--
+
+  <<!-- Christmas Spirit -->
+    <script>
+
+
+      function checkTimeAndTriggerFireworks() {
+        const currentDate = new Date();
+        const currentMonth = currentDate.getMonth();
+        const currentHour = currentDate.getHours();
+        const currentMinutes = currentDate.getMinutes();
+        // Check if it's January and the time is 00:00
+        if (currentMonth === 0 && currentHour === 0 && currentMinutes === 0) {
+          const container = document.querySelector('.fireworks')
+          const fireworks = new Fireworks.default(container)
+          fireworks.start()
+        }
+      }
+      function createTwinklingLights(containerSelector, numLights) {
+        const lightrope = document.querySelector(containerSelector);
+
+        for (let i = 0; i < numLights; i++) {
+          const light = document.createElement('div');
+          lightrope.appendChild(light);
+        }
+      }
+      const currentDate = new Date();
+      const currentMonth = currentDate.getMonth();
+      const monthsWithSnow = [11, 0];
+
+
+
+      window.onload = function () {
+        if (monthsWithSnow.includes(currentMonth)) {
+          const snowScript = document.createElement('script');
+          snowScript.src = 'https://app.embed.im/snow.js';
+          snowScript.defer = true;
+          document.head.appendChild(snowScript);
+          createTwinklingLights('.lightrope', 19);
+          setInterval(checkTimeAndTriggerFireworks, 1000);
+        }
+
+
+      };
+
+    </script>
+
+    <!--
     - favicon
   -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon" />
 
-  <!--
+    <!--
     - custom css link
   -->
-  <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
 
-  <!--
+    <!--
     - google font link
   -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
 </head>
 
 
@@ -141,7 +185,7 @@
       <!--
         - #ABOUT
       -->
-
+      <div class="lightrope" style="margin-top: -18px;"></div>
       <article class="about active" data-page="about">
         <header>
           <h2 class="h2 article-title">About me</h2>
